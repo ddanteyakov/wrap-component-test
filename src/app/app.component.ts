@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'wrap-material-radio';
   chosenFruit: string;
 
@@ -13,6 +13,10 @@ export class AppComponent {
     "apple",
     "orange"
   ]
+
+  public ngOnInit(): void {
+    this.chosenFruit = 'apple';
+  }
 
   setValue(value) {
     this.chosenFruit = value;

@@ -5,6 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './lkp-radio-button.component.html',
 })
 export class LkpRadioButtonComponent implements OnInit {
+  @Input() checked = false;
   @Input() value: any;
 
   constructor() { }
