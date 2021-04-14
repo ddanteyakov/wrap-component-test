@@ -1,5 +1,5 @@
 <lkp-radio-group [value]="chosenFruit">
   <div *ngFor="let fruit of fruits" (click)="setValue(fruit)">
-    <lkp-radio-button [value]="fruit">{{fruit}}</lkp-radio-button>
+    <lkp-radio-button [checked]="chosenFruit === fruit" [value]="fruit">{{fruit}}</lkp-radio-button>
   </div>
 </lkp-radio-group>
